@@ -66,6 +66,14 @@ class SquareAPI {
     }
 
     /**
+     * @param $endpoint
+     * @return string
+     */
+    protected function getCurloptUrl( $endpoint ) : string {
+        return $this->base_url . '/' . $endpoint;
+    }
+
+    /**
      * @param string $endpoint
      * @return bool|string
      */
