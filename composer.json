@@ -9,5 +9,10 @@
             "email": "tony@ethersense.com"
         }
     ],
+    "autoload": {
+        "classmap": [
+            "src/"
+        ]
+    },
     "require": {}
 }
