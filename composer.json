@@ -1,0 +1,13 @@
+{
+    "name": "theory/square-api",
+    "description": "Provides access to the Square platform.",
+    "type": "library",
+    "license": "GPL-3.0-or-later",
+    "authors": [
+        {
+            "name": "roguetheory",
+            "email": "tony@ethersense.com"
+        }
+    ],
+    "require": {}
+}
