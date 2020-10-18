@@ -4,11 +4,11 @@ namespace roguetheory\SquareAPI;
 
 class SquareAPI {
 
-    protected string $base_url = '';
-    protected string $version = '';
-    protected string $authorization = '';
-    protected string $type = '';
-    protected array $headers = [];
+    protected $base_url = '';
+    protected $version = '';
+    protected $authorization = '';
+    protected $type = '';
+    protected $headers = [];
 
     public function __construct( string $base_url = null, string $version = null, string  $authorization = null,  string  $type = 'application/json' ) {
         if( $base_url ) {
