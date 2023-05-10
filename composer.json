@@ -1,5 +1,5 @@
 {
-    "name": "theory/square-api",
+    "name": "roguetheory/square-api",
     "description": "Provides access to the Square platform.",
     "type": "library",
     "license": "GPL-3.0-or-later",
@@ -15,6 +15,7 @@
         ]
     },
     "require": {
+      "php": ">=8.1",
       "ext-curl": "*"
     }
 }
