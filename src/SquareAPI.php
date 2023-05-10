@@ -7,27 +7,27 @@ class SquareAPI {
     /**
      * @var string
      */
-    protected $base_url = '';
+    protected string $base_url = '';
 
     /**
      * @var string
      */
-    protected $version = '';
+    protected string $version = '';
 
     /**
      * @var string
      */
-    protected $authorization = '';
+    protected string $authorization = '';
 
     /**
      * @var string
      */
-    protected $type = '';
+    protected string $type = '';
 
     /**
      * @var array
      */
-    protected $headers = [];
+    protected array $headers = [];
 
     /**
      * SquareAPI constructor.
@@ -49,11 +49,12 @@ class SquareAPI {
         $this->type = $type;
         $this->setHeaders();
     }
-
+    
     /**
      * Set the headers
+     * @return void
      */
-    protected function setHeaders() {
+    protected function setHeaders() : void {
         if( ! empty( $this->version ) ) {
             $this->headers[] = 'Square-Version: ' . $this->version;
         }
@@ -77,7 +78,7 @@ class SquareAPI {
      * @param string $endpoint
      * @return bool|string
      */
-    public function get( string $endpoint ) {
+    public function get( string $endpoint ) : bool|string {
         $ch = curl_init();
         $headers = $this->headers;
         curl_setopt( $ch, CURLOPT_URL, $this->getCurloptUrl( $endpoint ) );
@@ -93,7 +94,7 @@ class SquareAPI {
      * @param array $body
      * @return bool|string
      */
-    public function post( string $endpoint, array $body ) {
+    public function post( string $endpoint, array $body ) : bool|string {
         $headers = $this->headers;
         $headers[] = 'Content-Type: ' . $this->type;
         $ch = curl_init();
@@ -107,4 +108,4 @@ class SquareAPI {
         return $response;
     }
 }
-?>
+
